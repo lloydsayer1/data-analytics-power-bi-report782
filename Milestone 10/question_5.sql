@@ -1,0 +1,1 @@
+SELECT category AS ProductCategory, SUM((sale_price * product_quantity)-(cost_price*product_quantity)) AS Profit FROM forquerying2 WHERE (dates BETWEEN '2021-01-01 00:00:00' AND '2022-01-01 00:00:00') AND full_region = 'Wiltshire, UK' GROUP BY category ORDER BY Profit DESC;
